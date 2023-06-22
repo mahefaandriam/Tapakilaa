@@ -1,0 +1,166 @@
+/* CSS pour la navbar */
+.navbar-default {
+    background-color: transparent;
+  }
+  
+  .navbar-default .navbar-brand.text-brand {
+    color: #ffffff;
+  }
+  
+  .navbar-default .navbar-brand.text-brand .color-b {
+    color: #ff0000;
+  }
+  
+  .navbar-default .nav-item .nav-link {
+    color: #ffffff;
+  }
+  
+  .navbar-default .nav-item .nav-link:hover,
+  .navbar-default .nav-item .nav-link:focus {
+    color: #ff0000;
+  }
+  
+  .navbar-default .navbar-toggle-box-collapse {
+    color: #ffffff;
+  }
+  
+  /* CSS pour la section intro */
+  .intro {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .intro .intro-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .intro .intro-item .bg-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  .intro .intro-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .intro .intro-item .intro-content {
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  
+  .intro .intro-item .intro-content .table-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .intro .intro-item .intro-content .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .intro .intro-item .intro-content .intro-body {
+    color: #ffffff;
+  }
+  
+  .intro .intro-item .intro-content .intro-title {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .intro .intro-item .intro-content .intro-subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 20px;
+  }
+  
+  .intro .intro-item .intro-content .intro-price .price-a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .intro .swiper-pagination {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+  
+  .intro .swiper-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+  
+  .intro .swiper-pagination .swiper-pagination-bullet:hover {
+    opacity: 1;
+  }
+  
+  .intro .swiper-pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+  
+/* CSS pour la barre de recherche dans la navbar */
+.navbar .example {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.navbar .example input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  box-sizing: border-box;
+}
+
+.navbar .example button {
+  padding: 8px 12px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.navbar .example button i {
+  color: #000000;
+}
+
+.navbar .example input[type="text"]:focus {
+  outline: none;
+}
+
+/* Réduire la taille de la barre de recherche sur les petits écrans */
+@media screen and (max-width: 768px) {
+  .navbar .example {
+    max-width: 200px;
+    margin-right: 10px;
+  }
+
+  .navbar .example input[type="text"] {
+    padding: 6px;
+  }
+
+  .navbar .example button {
+    padding: 6px 10px;
+  }
+}
+
+  

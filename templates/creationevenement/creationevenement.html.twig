@@ -1,0 +1,150 @@
+
+
+{% block body %}
+    <h2>Insérer votre événement</h2>
+
+    {{ form_start(form) }}
+
+    <div class="form-group">
+        {{ form_label(form.titre) }}
+        {{ form_widget(form.titre, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.type) }}
+        {{ form_widget(form.type, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.lieu) }}
+        {{ form_widget(form.lieu, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.ville) }}
+        {{ form_widget(form.ville, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.dateDebut) }}
+        {{ form_widget(form.dateDebut, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.dateFin) }}
+        {{ form_widget(form.dateFin, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.description) }}
+        {{ form_widget(form.description, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.image) }}
+        {{ form_widget(form.image, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <button type="submit" class="btn btn-primary" href="#">creer les billets</button>
+
+    {{ form_end(form) }}
+
+
+    <h2>Ajouter un billet</h2>
+    <form method="POST" action="#">
+        {{ form_start(form) }}
+
+        {{ form_row(form.titre) }}
+        {{ form_row(form.debutVente) }}
+        {{ form_row(form.finVente) }}
+    
+        <h3>Catégories de billets</h3>
+        <div id="categories-wrapper">
+            {% for categorieForm in form.categories %}
+                {{ form_row(categorieForm.nom) }}
+                {{ form_row(categorieForm.prix) }}
+                {{ form_row(categorieForm.nombreDisponible) }}
+                {{ form_row(categorieForm.tva) }}
+                <hr>
+            {% endfor %}
+        </div>
+
+        <a href="{{ path('app_billets_create') }}" id="ajouter-categorie">Ajouter une catégorie</a>
+        <a href="#" id="supprimer-categorie">Supprimer la dernière catégorie</a>
+    
+        {{ form_end(form) }}
+    </form>
+
+   <script>
+    const categoriesWrapper = document.getElementById('categories-wrapper');
+    const ajouterCategorie = document.getElementById('ajouter-categorie');
+    const supprimerCategorie = document.getElementById('supprimer-categorie');
+    
+    ajouterCategorie.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        const index = categoriesWrapper.childElementCount;
+        const prototype = '#';
+        const newForm = prototype.replace(/__name__/g, index);
+        
+        categoriesWrapper.innerHTML += newForm;
+    });
+    
+    supprimerCategorie.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        const lastForm = categoriesWrapper.lastElementChild;
+        if (lastForm) {
+            lastForm.remove();
+        }
+    });
+</script>
+
+
+<div class="form-container">
+        <h2>Inserer votre informations</h2>
+
+        <form>
+        <div>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom">
+        </div>
+
+        <div>
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom">
+        </div>
+
+        <div>
+            <label for="sexe">Sexe :</label>
+            <select id="sexe" name="sexe">
+                <option value="homme">Homme</option>
+                <option value="femme">Femme</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="cin">CIN :</label>
+            <input type="text" id="cin" name="cin">
+        </div>
+
+        <div>
+            <label for="adresse">Adresse :</label>
+            <input type="text" id="adresse" name="adresse">
+        </div>
+
+        <div>
+            <label for="code_postal">Code Postal :</label>
+            <input type="text" id="code_postal" name="code_postal">
+        </div>
+
+        <div>
+            <label for="ville">Ville :</label>
+            <input type="text" id="ville" name="ville">
+        </div>
+
+        <button type="submit" href="#">Page suivante</button>
+            
+        </form>
+    </div>
+{% endblock %}

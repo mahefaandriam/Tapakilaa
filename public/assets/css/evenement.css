@@ -1,0 +1,26 @@
+/* evenement.css */
+
+/* Couleur de fond pour le formulaire */
+.form-group {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Couleur de bordure pour les champs de saisie */
+.form-control {
+    border-color: red;
+}
+
+/* Couleur de bordure pour le bouton */
+.btn-primary {
+    border-color: green;
+    background-color: green;
+    color: white;
+}
+
+/* Couleur de texte pour les labels */
+label {
+    color: red;
+}
+

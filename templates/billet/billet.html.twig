@@ -1,0 +1,17 @@
+{# templates/billet/billet.html.twig #}
+
+{% block title %}Billet{% endblock %}
+
+{% block body %}
+    <h1>Ajouter un billet</h1>
+
+    {{ form_start(form) }}
+
+    {{ form_row(form.titreEvenement) }}
+    {{ form_row(form.debutVente) }}
+    {{ form_row(form.finVente) }}
+
+    <button type="submit">Enregistrer</button>
+
+    {{ form_end(form) }}
+{% endblock %}

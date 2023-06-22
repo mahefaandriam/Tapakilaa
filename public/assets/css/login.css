@@ -1,0 +1,81 @@
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .form-control {
+    margin-bottom: 15px;
+  }
+  
+  .alert {
+    margin-bottom: 15px;
+  }
+  
+  .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .nav-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #999;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    color: #555;
+  }
+  
+  section.container {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  section.container h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  section.container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  section.container input[type="email"],
+  section.container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  section.container input[type="email"]:focus,
+  section.container input[type="password"]:focus {
+    outline: none;
+    border-color: #aaa;
+    box-shadow: 0 0 5px #ccc;
+  }
+  
+  section.container button[type="submit"] {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  section.container button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  section.container .nav-link {
+    margin-top: 15px;
+  }
+  

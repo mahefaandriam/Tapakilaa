@@ -1,0 +1,61 @@
+
+
+{% extends 'layouts/base2.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('assets/css/organisateur.css') }}" />
+{% endblock %}
+
+{% block body %}
+
+<div class="form-container">
+        <h2>Inserer votre informations</h2>
+
+        <form>
+             <div>
+            <label for="type">Type :</label>
+            <select id="type" name="type">
+                <option value="homme">Homme</option>
+                <option value="femme">Femme</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom">
+        </div>
+
+        <div>
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom">
+        </div>
+
+        <div>
+            <label for="civilite">Civilité :</label>
+            <select id="civilite" name="civilite">
+                <option value="homme">Homme</option>
+                <option value="femme">Femme</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="cin">CIN :</label>
+            <input type="text" id="cin" name="cin">
+        </div>
+
+         <div>
+            <label for="code_postal">Code Postal :</label>
+            <input type="text" id="code_postal" name="code_postal">
+        </div>
+
+        <div>
+            <label for="adresse">Adresse :</label>
+            <input type="text" id="adresse" name="adresse">
+        </div>
+
+        <button type="submit" href="#">Page suivante</button>
+            
+        </form>
+    </div>
+
+{% endblock %}

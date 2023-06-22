@@ -1,0 +1,13 @@
+{# templates/billets/create.html.twig #}
+
+
+{% block body %}
+    <h1>Créer un nouveau billet</h1>
+
+    {{ form_start(form) }}
+        {{ form_row(form.title) }}
+        {{ form_row(form.content) }}
+        {{ form_row(form.author) }}
+        <button type="submit" class="btn btn-primary">Créer</button>
+    {{ form_end(form) }}
+{% endblock %}

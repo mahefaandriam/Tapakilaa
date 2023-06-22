@@ -1,0 +1,49 @@
+ /* style1.css */
+
+/* Couleur de fond de la navbar */
+.navbar {
+    background-color: #D21033; /* Couleur du drapeau de Madagascar */
+  }
+  
+  /* Couleur du texte de la navbar */
+  .navbar-brand.text-brand {
+    color: white;
+  }
+  
+  /* Couleur des lettres "Tapa" */
+  .navbar-brand.text-brand .color-b {
+    color: #FFFFFF; /* Couleur blanche */
+  }
+  
+  /* Couleur des lettres "kila" */
+  .navbar-brand.text-brand:not(.color-b) {
+    color: #00FF00; /* Couleur verte */
+  }
+  
+  /* Couleur de texte des liens de navigation */
+  .nav-link {
+    color: white;
+  }
+  
+  /* Couleur de texte des items de menu déroulant */
+  .dropdown-item {
+    color: black;
+  }
+  
+  /* Couleur du bouton de recherche */
+  .btn-b-n {
+    color: white;
+    border-color: white;
+  }
+  
+  /* Alignement du texte dans la navbar */
+  .nav-link.ms-auto.mb-2.mb-lg-0 {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Icône de recherche */
+  .navbar-toggle-box .bi-search {
+    color: white;
+  }
+  
