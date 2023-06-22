@@ -1,5 +1,5 @@
 <?php
-
+// nisy zavatra niova teo
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -27,11 +27,11 @@ class EvenementController extends AbstractController
     public function index(Request $request): Response
     {
          // Get the current authenticated user
-    $user = $this->security->getUser();
+    	$user = $this->security->getUser();
 
-    // Retrieve the user from the repository
-    $repository = $this->managerRegistry->getRepository(Users::class);
-    $user = $repository->find($user->getId());
+    	// Retrieve the user from the repository
+    	$repository = $this->managerRegistry->getRepository(Users::class);
+    	$user = $repository->find($user->getId());
         $organisateur = $user->getOrganisateur();
         
         $event = new Evenement();
